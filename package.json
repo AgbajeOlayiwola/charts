@@ -11,6 +11,8 @@
   "dependencies": {
     "@next/font": "13.4.3",
     "chart.js": "^4.3.0",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "chartjs-plugin-piechart-outlabels": "^0.1.4",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "next": "13.4.3",

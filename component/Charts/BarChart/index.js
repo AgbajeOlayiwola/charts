@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import { Bar } from 'react-chartjs-2'
 const BarChart = () => {
   const [chartData, setChartData] = useState({
-    labels: ['Red', 'Blue', 'Yellow'],
+    labels: ['2022', '2023', '2024', '2025', '2026', '2027'],
     datasets: [
       {
-        data: [30, 50, 20],
-        backgroundColor: ['red', 'blue', 'yellow'],
+        data: [150, 300, 450, 600, 750, 900, 1050],
+        backgroundColor: ['green', 'green', 'green', 'green', 'green', 'green'],
+        barThickness: '10',
       },
     ],
   })
@@ -55,7 +56,7 @@ const BarChart = () => {
           plugins: {
             title: {
               display: true,
-              text: 'Users Gained between 2016-2020',
+              text: 'Expected guarantee portfolio growth (year-on-year) ()',
             },
             legend: {
               display: false,

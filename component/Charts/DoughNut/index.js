@@ -1,15 +1,31 @@
 import React, { useState } from 'react'
 import { Doughnut } from 'react-chartjs-2'
+
 const DoughNut = () => {
   const [chartData, setChartData] = useState({
-    labels: ['Red', 'Blue', 'Yellow'],
     datasets: [
       {
+        // label: ['red', 'amber', 'green'],
         data: [30, 50, 20],
-        backgroundColor: ['red', 'blue', 'yellow'],
+        backgroundColor: ['red', '#ed7d31', 'green'],
+        weight: '6',
       },
     ],
+    labels: ['red', 'amber', 'green'],
   })
+  const options = {
+    plugins: {
+      datalabels: {
+        color: '#fff',
+        anchor: 'end',
+        align: 'start',
+        offset: 10,
+        borderWidth: 2,
+        borderColor: '#fff',
+        borderRadius: 4,
+      },
+    },
+  }
 
   const handleInputChange = (event) => {
     const { name, value } = event.target
@@ -30,22 +46,22 @@ const DoughNut = () => {
 
   return (
     <div className="chart-container">
-      <h2 style={{ textAlign: 'center' }}>Line Chart</h2>
+      <h2 style={{ textAlign: 'center' }}>PieChart1</h2>
       <input
         type="text"
-        name="Red"
+        name="red"
         onChange={handleInputChange}
         value={chartData.datasets[0].data[0]}
       />
       <input
         type="text"
-        name="Blue"
+        name="amber"
         onChange={handleInputChange}
         value={chartData.datasets[0].data[1]}
       />
       <input
         type="text"
-        name="Yellow"
+        name="green"
         onChange={handleInputChange}
         value={chartData.datasets[0].data[2]}
       />
@@ -55,10 +71,22 @@ const DoughNut = () => {
           plugins: {
             title: {
               display: true,
-              text: 'Users Gained between 2016-2020',
+              text:
+                'Categorisation of  of Mandated Transactions as at 31 March 2023',
             },
-            legend: {
-              display: false,
+
+            // legend: {
+            //   display: false,
+            // },
+            outlabels: {
+              text: '%l %p',
+              color: 'white',
+              stretch: 35,
+              font: {
+                resizable: true,
+                minSize: 12,
+                maxSize: 18,
+              },
             },
           },
         }}

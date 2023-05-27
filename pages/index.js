@@ -4,6 +4,9 @@ import styles from '../styles/Home.module.css'
 import BarChart from '../component/Charts/BarChart'
 import LineCHart from '../component/Charts/LIneChart'
 import DoughNut from '../component/Charts/DoughNut'
+import BarChart2 from '../component/Charts/LineChart2'
+import DoughNut1 from '../component/Charts/DougnNut1'
+import DoughNut2 from '../component/Charts/DoughNut2'
 
 export default function Home() {
   const [input1, setInput1] = useState(20)
@@ -60,6 +63,9 @@ export default function Home() {
         <BarChart chartData={chartData} />
         <LineCHart chartData={chartData} />
         <DoughNut chartData={chartData} />
+        <BarChart2 />
+        <DoughNut1 />
+        <DoughNut2 />
       </main>
     </>
   )
