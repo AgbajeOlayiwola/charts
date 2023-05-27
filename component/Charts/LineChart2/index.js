@@ -3,17 +3,11 @@ import { Bar } from 'react-chartjs-2'
 
 const BarChart2 = () => {
   const [chartData, setChartData] = useState({
-    labels: ['Q12022', 'Q22022', 'Q32022', 'Q32022', 'Q42022'],
+    labels: ['Q12022', 'Q22022', 'Q32022', 'Q42022'],
     datasets: [
       {
         data: [150, 300, 450, 600, 750, 900, 1050],
-        backgroundColor: [
-          '#5191c9',
-          '#5191c9',
-          '#5191c9',
-          '#5191c9',
-          '#5191c9',
-        ],
+        backgroundColor: ['#5191c9', '#5191c9', '#5191c9', '#5191c9'],
         barThickness: '30',
       },
     ],
@@ -70,7 +64,9 @@ const BarChart2 = () => {
             plugins: {
               title: {
                 display: true,
-                text: 'Expected guarantee portfolio growth (year-on-year) ()',
+                text: 'XXXXXXXXXXx',
+                color: '#0070c0',
+                font: { size: '20px' },
               },
               legend: {
                 display: false,

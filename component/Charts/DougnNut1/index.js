@@ -98,10 +98,13 @@ const DoughNut1 = () => {
               display: true,
               text:
                 'Categorisation of the Guarantee Portfolio of Nx.xx by sector as at 31 March 2023',
+              color: '#70ad47',
+              font: { size: '20px' },
             },
-            legend: {
-              display: false,
-            },
+
+            // legend: {
+            //   display: false,
+            // },
           },
         }}
       />

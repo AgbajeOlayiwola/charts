@@ -6,7 +6,14 @@ const BarChart = () => {
     datasets: [
       {
         data: [150, 300, 450, 600, 750, 900, 1050],
-        backgroundColor: ['green', 'green', 'green', 'green', 'green', 'green'],
+        backgroundColor: [
+          '#70ad47',
+          '#70ad47',
+          '#70ad47',
+          '#70ad47',
+          '#70ad47',
+          '#70ad47',
+        ],
         barThickness: '10',
       },
     ],
@@ -34,21 +41,39 @@ const BarChart = () => {
       <h2 style={{ textAlign: 'center' }}>Bar Chart</h2>
       <input
         type="text"
-        name="Red"
+        name="2022"
         onChange={handleInputChange}
         value={chartData.datasets[0].data[0]}
       />
       <input
         type="text"
-        name="Blue"
+        name="2023"
         onChange={handleInputChange}
         value={chartData.datasets[0].data[1]}
       />
       <input
         type="text"
-        name="Yellow"
+        name="2024"
         onChange={handleInputChange}
         value={chartData.datasets[0].data[2]}
+      />
+      <input
+        type="text"
+        name="2025"
+        onChange={handleInputChange}
+        value={chartData.datasets[0].data[3]}
+      />
+      <input
+        type="text"
+        name="2026"
+        onChange={handleInputChange}
+        value={chartData.datasets[0].data[4]}
+      />
+      <input
+        type="text"
+        name="2027"
+        onChange={handleInputChange}
+        value={chartData.datasets[0].data[5]}
       />
       <Bar
         data={chartData}
@@ -57,6 +82,8 @@ const BarChart = () => {
             title: {
               display: true,
               text: 'Expected guarantee portfolio growth (year-on-year) ()',
+              color: '#70ad47',
+              font: { size: '20px' },
             },
             legend: {
               display: false,

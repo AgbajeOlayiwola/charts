@@ -117,10 +117,13 @@ const DoughNut2 = () => {
               display: true,
               text:
                 'Analysis of Guaranteed Transactions Since Inception of Nx.xx as at 31 March 2023',
+              color: '#70ad47',
+              font: { size: '20px' },
             },
-            legend: {
-              display: false,
-            },
+
+            // legend: {
+            //   display: false,
+            // },
           },
         }}
       />

@@ -73,6 +73,8 @@ const DoughNut = () => {
               display: true,
               text:
                 'Categorisation of  of Mandated Transactions as at 31 March 2023',
+              color: '#70ad47',
+              font: { size: '20px' },
             },
 
             // legend: {
